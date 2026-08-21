@@ -16,5 +16,8 @@ CREATE TABLE post (
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   title TEXT NOT NULL,
   body TEXT NOT NULL,
+  category TEXT NOT NULL DEFAULT 'General',
+  status TEXT NOT NULL DEFAULT 'Draft',
+  due_date TEXT,
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
